@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/"
+title = "YouTube 숨겨진 채널 발굴기"
+version = "1.0.0"
+id = "artifacts/youtube-hidden-gems"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 18870
+
+[services.development]
+run = "pnpm --filter @workspace/youtube-hidden-gems run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/youtube-hidden-gems", "run", "build" ]
+publicDir = "artifacts/youtube-hidden-gems/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "18870"
+BASE_PATH = "/"

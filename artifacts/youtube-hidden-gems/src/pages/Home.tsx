@@ -545,15 +545,7 @@ export default function Home() {
               <span className="text-4xl float-organic inline-block">💎</span>
             </div>
             <h2 className="text-xl font-bold mb-2" style={{ color: "rgba(0,0,0,0.55)" }}>숨겨진 보석을 찾아보세요</h2>
-            <p className="text-sm mb-6" style={{ color: "rgba(0,0,0,0.35)" }}>키워드 입력 또는 위 예시 버튼을 클릭해보세요</p>
-            <button
-              onClick={() => setShowHowTo(true)}
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-full text-sm font-semibold transition-all hover:scale-105"
-              style={{ background: "rgba(0,0,0,0.05)", border: "1px solid rgba(0,0,0,0.15)", color: "#333" }}
-            >
-              <BookOpen size={15} />
-              사용 방법 보기
-            </button>
+            <p className="text-sm" style={{ color: "rgba(0,0,0,0.35)" }}>키워드 입력 또는 위 예시 버튼을 클릭해보세요</p>
           </div>
         )}
 

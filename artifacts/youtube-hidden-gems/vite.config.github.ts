@@ -19,6 +19,6 @@ export default defineConfig({
     emptyOutDir: true,
   },
   define: {
-    'import.meta.env.VITE_API_URL': JSON.stringify('https://5970fb1a-4c46-4b30-9edb-f75499964ae1-00-3ta9dubsz0yhi.sisko.replit.dev'),
+    'import.meta.env.VITE_API_URL': JSON.stringify('https://TubeRadar.replit.app'),
   },
 });

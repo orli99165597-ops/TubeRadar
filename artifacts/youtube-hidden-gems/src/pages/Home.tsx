@@ -215,7 +215,8 @@ export default function Home() {
         maxResults: "20",
         ...(pageToken ? { pageToken } : {}),
       });
-      const res = await fetch(`/api/youtube/channels/search?${params}`);
+      const apiBase = import.meta.env.VITE_API_URL || '';
+      const res = await fetch(`${apiBase}/api/youtube/channels/search?${params}`);
       const data = await res.json();
       if (!res.ok) throw new Error(data.error || "검색 실패");
 
